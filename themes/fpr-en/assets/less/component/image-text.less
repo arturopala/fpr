@@ -1,0 +1,42 @@
+.image-text {
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 60px;
+	border-radius: 10px;
+
+	.image-text_inner {
+		padding-bottom: 60%;
+	}
+
+	.image-text_image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	.image-text_content {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		background: @colorPrimary;
+		background: rgba(red(@colorPrimary), green(@colorPrimary), blue(@colorPrimary), 0.7);
+		padding: 10px 20px;
+	}
+
+	.image-text_title {
+		.font-size(26);
+		color: #fff;
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+		text-transform: uppercase;
+	}
+
+	.image-text_subtitle {
+		.font-size(18);
+		color: #fff;
+		text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+		text-transform: uppercase;
+		font-weight: 300;
+	}
+}

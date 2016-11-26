@@ -1,0 +1,42 @@
+.read-more {
+	position: relative;
+}
+
+.read-more_inner {
+	max-height: 150px;
+	overflow: hidden;
+	padding-bottom: 45px;
+}
+
+.read-more_cta {
+	background: #fff;
+
+
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	padding: 10px 0;
+
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 40px;
+		bottom: 100%;
+		left: 0;
+		background: -webkit-linear-gradient(transparent, #fff);
+		background: -o-linear-gradient(transparent, #fff);
+		background: -moz-linear-gradient(transparent, #fff);
+		background: linear-gradient(transparent, #fff);
+	}
+}
+
+.read-more--is-open {
+	.read-more_inner {
+		max-height: 9999px;
+	}
+
+	.read-more_cta:before {
+		display: none;
+	}
+}

@@ -1,0 +1,88 @@
+.btn (){
+	.font-size(14);
+	padding: 10px 25px;
+	display: inline-block;
+	cursor: pointer;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+	text-decoration: none;
+	text-transform: uppercase;
+	min-width: 160px;
+	text-align: center;
+	border: none;
+}
+
+.btn-primary {
+	.btn;
+	color: #fff;
+	background: @colorPrimary;
+
+	&:hover,
+	&:focus {
+		color: lighten(#fff, 10%);
+		background: lighten(@colorPrimary, 10%);
+	}
+}
+
+.btn-secondary {
+	.btn;
+	color: @colorPrimary;
+	background: #fff;
+
+	&:hover,
+	&:focus {
+		color: lighten(@colorPrimary, 10%);
+		background: darken(#fff, 10%);
+	}
+}
+
+.btn--large {
+	.font-size(26);
+	padding: 15px 40px;
+
+}
+
+.btn-facebook,
+.btn-twitter,
+.btn-youtube {
+	display: inline-block;
+	padding: 5px;
+	background: #305891;
+	color: #fff;
+	//width: 30px;
+	line-height: 20px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 5px;
+	line-height: 1;
+
+
+	&:hover,
+	&:focus {
+		color: #eee;
+		opacity: 0.9;
+	}
+
+	span {
+		vertical-align: middle;
+		.font-size(12);
+	}
+
+	.fa {
+		.font-size(16);	
+	}
+}
+
+.btn-twitter {
+	background: #2ca8d2;
+}
+
+.btn-youtube {
+	background: #db2625;
+}
+
+.btn-large {
+	.fa {
+		.font-size(20);
+	}
+}
