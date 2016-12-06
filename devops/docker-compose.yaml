@@ -6,12 +6,12 @@ services:
      image: mariadb:latest
      container_name: mysql
      ports:
-      - "3336:3306"
+      - "3306:3306"
      restart: always
      environment:
        MYSQL_ROOT_PASSWORD: mpsLGtRe9HnS5mrd
      volumes:
-       - db_data:/var/lib/mysql
+       - mysql-data:/var/lib/mysql
 
    wordpress-es:
      depends_on:
@@ -25,14 +25,10 @@ services:
      environment:
        WORDPRESS_DB_PASSWORD: mpsLGtRe9HnS5mrd
        WORDPRESS_DB_HOST: mysql
-       WORDPRESS_DB_NAME: wordpress
+       WORDPRESS_DB_NAME: wordpress-es
      volumes:
-       - wp_data_es:/var/www/html
+       - wp-es-data:/var/www/html
        
 volumes:
-    db_data:
-      external:
-        name: /volumes/mysql
-    wp_data_es:
-      external:
-        name: /volumes/wordpress-es
+    mysql-data:
+    wp-es-data:
