@@ -11,7 +11,7 @@ services:
      environment:
        MYSQL_ROOT_PASSWORD: mpsLGtRe9HnS5mrd
      volumes:
-       - mysql-data:/var/lib/mysql
+       - ~/mysql-disk:/var/lib/mysql:rw
 
    wordpress-es:
      depends_on:
@@ -25,10 +25,8 @@ services:
      environment:
        WORDPRESS_DB_PASSWORD: mpsLGtRe9HnS5mrd
        WORDPRESS_DB_HOST: mysql
-       WORDPRESS_DB_NAME: wordpress-es
+       WORDPRESS_DB_NAME: wordpress
      volumes:
-       - wp-es-data:/var/www/html
-       
-volumes:
-    mysql-data:
-    wp-es-data:
+       - ~/wordpress-es-disk:/var/www/html:rw
+       - ~/letsencrypt-es-disk:/var/www/letsencrypt/live:rw
+   
